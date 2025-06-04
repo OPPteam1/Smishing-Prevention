@@ -3,6 +3,10 @@ from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.naive_bayes import MultinomialNB
 from sklearn.preprocessing import LabelEncoder
 
+from sklearn.linear_model import LogisticRegression
+from sklearn.feature_extraction.text import TfidfVectorizer
+import joblib
+
 # 1. 데이터 불러오기
 df = pd.read_csv("phising_dataset.csv")
 X = df["message"]
@@ -20,8 +24,18 @@ X_vec = vectorizer.fit_transform(X)
 model = MultinomialNB()
 model.fit(X_vec, y_encoded)
 
-# 4. 예측 테스트
-test = ["이 문자가 스미싱일까요 아닐까요?"]
-test_vec = vectorizer.transform(test)
-pred = model.predict(test_vec)[0]
-print("예측 결과:", "스미싱" if pred == 1 else "정상")
+# 4. 예측 함수 정의
+def predict_message(model, vectorizer, message):
+    if len(message.strip()) <= 2:
+        return "메시지 길이가 너무 짧아 예측이 어렵습니다!"
+    test_vec = vectorizer.transform([message])
+    pred = model.predict(test_vec)[0]
+    return "스미싱" if pred == 1 else "정상"
+
+# # 5. 테스트 실행
+# test = ""
+# print("예측 결과:", predict_message(model, vectorizer, test))
+
+# # 저장
+# joblib.dump(model, 'phishing_model.pkl')  
+# joblib.dump(vectorizer, 'vectorizer.pkl')
