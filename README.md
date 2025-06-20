@@ -39,4 +39,5 @@ This project aims to develop a machine learning model that automatically detects
   
 2. When testing the model with messages that were explicitly labeled and trained as legitimate (non-smishing),
 
-![Uploading image.png…]()
+![image](https://github.com/user-attachments/assets/5ddc6693-b35b-439f-8eb3-8c3b6c22a6bb)
+
