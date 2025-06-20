@@ -66,13 +66,13 @@ occasionally misclassified as smishing. This issue can be attributed to the foll
 - Overfitting to specific words that frequently appear in smishing messages
 ![image](https://github.com/user-attachments/assets/c08c7711-45f8-4601-a015-d06230f0d7aa)
 
-*Solution: To address this issue, we diversified the training data by including short, simple expressions such as "응", "네", and "안녕" with the label 0 (non-smishing). This helped the model better distinguish between harmless, everyday language and actual smishing content.
+* Solution: To address this issue, we diversified the training data by including short, simple expressions such as "응", "네", and "안녕" with the label 0 (non-smishing). This helped the model better distinguish between harmless, everyday language and actual smishing content.
   
 2. When testing the model with messages that were explicitly labeled and trained as legitimate (non-smishing),
 
 ![image](https://github.com/user-attachments/assets/5ddc6693-b35b-439f-8eb3-8c3b6c22a6bb)
 
-*Solution: To improve the model’s robustness, we performed data augmentation by introducing benign messages that include commonly misinterpreted words extracted from smishing samples. This aimed to reduce false positives caused by keyword-based overfitting.
+* Solution: To improve the model’s robustness, we performed data augmentation by introducing benign messages that include commonly misinterpreted words extracted from smishing samples. This aimed to reduce false positives caused by keyword-based overfitting.
 
 ---
 
@@ -80,14 +80,14 @@ occasionally misclassified as smishing. This issue can be attributed to the foll
 ---
 We developed a simple and intuitive web-based user interface using Streamlit to allow users to interact with the smishing detection model.
 
-*Features:
+* Features:
 -Users can input any SMS message directly into the app.
 
 -The app instantly classifies the message as either "Legitimate" or "Smishing" based on the trained model.
 
 -The interface displays detection results in real time with visual feedback.
 
-*How it works:
+* How it works:
 
 -The user types or pastes an SMS message into the input box.
 
@@ -103,7 +103,7 @@ We chose Streamlit for its ease of use and quick deployment capabilities, making
 ---
 When we first started using Streamlit to build the user interface, the app window did not open properly, and the terminal showed errors or stalled without launching the local web page.
 
-*Cause:
+* Cause:
 
 -Some required packages (like scikit-learn) were not installed in the environment.
 
@@ -114,7 +114,7 @@ When we first started using Streamlit to build the user interface, the app windo
 ![image](https://github.com/user-attachments/assets/fc653025-f78d-4ec9-ab64-ad99e2e847e8)
 
 
-*Solution:
+* Solution:
 
 -We checked and installed all necessary dependencies
 
