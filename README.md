@@ -41,3 +41,5 @@ This project aims to develop a machine learning model that automatically detects
 
 ![image](https://github.com/user-attachments/assets/5ddc6693-b35b-439f-8eb3-8c3b6c22a6bb)
 
+->To improve the model’s robustness, we performed data augmentation by introducing benign messages that include commonly misinterpreted words extracted from smishing samples. This aimed to reduce false positives caused by keyword-based overfitting.
+
