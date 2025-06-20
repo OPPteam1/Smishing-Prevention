@@ -1,31 +1,42 @@
-# AI 기반 스미싱 문자 탐지 시스템
+# AI-based Smishing Message Detection System
 
-## 프로젝트 소개
+## Description
 ---
 
-사용자가 입력한 텍스트 또는 이미지에서 문자를 추출하고, 해당 문자가 스미싱인지 정상인지 분류하는 인공지능 기반 탐지 시스템입니다.
+This project aims to develop a machine learning model that automatically detects smishing (SMS phishing) messages. By analyzing the textual content of messages, the system classifies them as either benign or malicious, helping users avoid fraudulent scams.
 
 ---
-## 데이터 구축 방법
-1. 직접 수신한 문자 기반 수집
-팀원 각자의 휴대폰에서 수신한 정상 문자와 스팸 문자를 수집하여 데이터로 활용하였습니다.
 
-2. 온라인 자료 기반 수집
-뉴스 기사, 커뮤니티, 블로그 등에서 제공된 피싱/스팸 문자 사례와 이미지 내 문자 내용을 추출하여 텍스트로 정리하였습니다.
+## Team Contributions
+-Hyunjin Bang: Expanded the dataset, Integrated components into a complete runnable script, Authored the project report
+-Byulhwi Son : Expanded the dataset, Implemented model training code, Wrote the README file 
+-Inseo Yoo   : Expanded the dataset, Developed the UI using Streamlit, Created usage examples, Recorded a demonstration video
 
-3. AI 기반 문장 생성 및 변형
-ChatGPT를 활용하여 실제 스팸 유형과 유사한 문장을 다양한 유형으로 생성하고, 기존 문장을 변형하여 학습에 활용 가능한 문장을 보완하였습니다.
+---
+## How the Dataset Was Built
+1.Collection from Personal Devices
+-Each team member collected both legitimate and spam SMS messages received on their personal mobile phones. 
+-These messages were manually reviewed and labeled for use in model training.
+
+2.Collection from Online Sources
+-We gathered smishing and phishing message samples from news articles, online communities, blogs, and forums.
+-Text content was also extracted from images of spam messages when available.
+
+3.AI-based Sentence Generation and Augmentation
+-Using ChatGPT, we generated various sentence types that mimic real-world smishing patterns.
+-We also modified existing messages to create additional synthetic samples for more robust model training.
+
 ---
 
-## 모델 학습 테스트 결과
-1. '응', '네', '안녕'과 같은 단순하고 일상적인 단어들을 스미싱으로 잘못 분류하는 사례가 발견되었습니다. 이는 다음과 같은 이유로 분석됩니다:
+##  Model Performance
+1.  Misclassification Cases, We found that simple, everyday words such as “응” (yes), “네” (okay), and “안녕” (hello) were occasionally misclassified as smishing. This issue can be attributed to the following factors:
 
-- 학습 데이터에서 스팸과 정상 메시지 간의 언어적 차이가 충분히 반영되지 않음
-- 단문 텍스트에 대한 학습 부족
-- 일부 스팸 메시지에 반복적으로 등장하는 특정 단어에 대한 과잉 학습 현상
+- Insufficient linguistic distinction between spam and legitimate messages in the training data
+- Lack of training data for short-text messages
+- Overfitting to specific words that frequently appear in smishing messages
 ![image](https://github.com/user-attachments/assets/c08c7711-45f8-4601-a015-d06230f0d7aa)
-->'응', '네', '안녕' 등 label = 0으로 다양하게 학습시켰습니다.
-
-2. 정상 문자로 학습시킨 데이터를 테스트 해보니 스미싱으로 잘못 분류하는 사례가 발견되었습니다.
+->To address this issue, we diversified the training data by including short, simple expressions such as "응", "네", and "안녕" with the label 0 (non-smishing). This helped the model better distinguish between harmless, everyday language and actual smishing content.
+  
+2. When testing the model with messages that were explicitly labeled and trained as legitimate (non-smishing),
 
 ![Uploading image.png…]()
