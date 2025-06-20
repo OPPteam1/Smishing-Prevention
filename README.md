@@ -47,8 +47,10 @@ avoid fraudulent scams.
 
 ### Model Details
 ---
-We trained a **Multinomial Naive Bayes classifier** using a TF-IDF representation of SMS texts.  
+
+We trained a Multinomial Naive Bayes classifier using a TF-IDF representation of SMS texts.  
 Naive Bayes is known for its simplicity and speed, and it performs well on spam detection tasks involving short texts.
+
 ---
 
 ### Model Performance
