@@ -42,7 +42,16 @@ avoid fraudulent scams.
 
 ---
 
-##  Model Performance
+##  Model
+---
+
+### Model Details
+---
+We trained a **Multinomial Naive Bayes classifier** using a TF-IDF representation of SMS texts.  
+Naive Bayes is known for its simplicity and speed, and it performs well on spam detection tasks involving short texts.
+---
+
+### Model Performance
 ---
 1.  Misclassification Cases, We found that simple, everyday words such as “응” (yes), “네” (okay), and “안녕” (hello) were
 
