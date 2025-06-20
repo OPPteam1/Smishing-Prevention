@@ -14,6 +14,7 @@ This project aims to develop a machine learning model that automatically detects
 
 ---
 ## How the Dataset Was Built
+---
 1.Collection from Personal Devices
 -Each team member collected both legitimate and spam SMS messages received on their personal mobile phones. 
 -These messages were manually reviewed and labeled for use in model training.
@@ -29,6 +30,7 @@ This project aims to develop a machine learning model that automatically detects
 ---
 
 ##  Model Performance
+---
 1.  Misclassification Cases, We found that simple, everyday words such as “응” (yes), “네” (okay), and “안녕” (hello) were occasionally misclassified as smishing. This issue can be attributed to the following factors:
 
 - Insufficient linguistic distinction between spam and legitimate messages in the training data
@@ -42,4 +44,9 @@ This project aims to develop a machine learning model that automatically detects
 ![image](https://github.com/user-attachments/assets/5ddc6693-b35b-439f-8eb3-8c3b6c22a6bb)
 
 ->To improve the model’s robustness, we performed data augmentation by introducing benign messages that include commonly misinterpreted words extracted from smishing samples. This aimed to reduce false positives caused by keyword-based overfitting.
+
+---
+
+## UI
+---
 
