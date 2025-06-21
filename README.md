@@ -53,7 +53,7 @@ Naive Bayes is known for its simplicity and speed, and it performs well on spam 
 
 ---
 
-### Model Performance
+### Model Performance/Improvement
 ---
 1.  Misclassification Cases, We found that simple, everyday words such as “응” (yes), “네” (okay), and “안녕” (hello) were
 
@@ -73,6 +73,13 @@ occasionally misclassified as smishing. This issue can be attributed to the foll
 ![image](https://github.com/user-attachments/assets/5ddc6693-b35b-439f-8eb3-8c3b6c22a6bb)
 
 * Solution: To improve the model’s robustness, we performed data augmentation by introducing benign messages that include commonly misinterpreted words extracted from smishing samples. This aimed to reduce false positives caused by keyword-based overfitting.
+
+3. False Positives in Messages Containing Family Terms
+
+Messages containing the word "엄마 (mom)" were consistently misclassified as smishing, even in clearly benign contexts.
+
+* Solution: We manually analyzed feature importance and found overfitting to certain keywords like "엄마", "아빠" (mom, dad).
+To mitigate this, we added more legitimate SMS messages that naturally include such terms to balance the training data.
 
 ---
 
@@ -123,6 +130,18 @@ When we first started using Streamlit to build the user interface, the app windo
 -After correcting the environment, we ran
 
 -The app launched successfully in the browser
+
+* Problem&Solution
+
+- Streamlit does not run on Google Colab, so the trained model and vectorizer were saved as .pkl files (phising_model.pkl, vectorizer.pkl).
+
+- We then developed and ran the full application locally using VS Code.
+
+-The app was executed via the terminal using: streamlit run phishing_app.py
+
+
+
+
 
 
 
