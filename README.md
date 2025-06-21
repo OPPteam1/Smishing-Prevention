@@ -133,9 +133,9 @@ When we first started using Streamlit to build the user interface, the app windo
 
 * Problem&Solution
 
-- Streamlit does not run on Google Colab, so the trained model and vectorizer were saved as .pkl files (phising_model.pkl, vectorizer.pkl).
+-Streamlit does not run on Google Colab, so the trained model and vectorizer were saved as .pkl files (phising_model.pkl, vectorizer.pkl).
 
-- We then developed and ran the full application locally using VS Code.
+-We then developed and ran the full application locally using VS Code.
 
 -The app was executed via the terminal using: streamlit run phishing_app.py
 
