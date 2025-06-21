@@ -30,9 +30,9 @@ if st.button("피싱 여부 확인"):
         prediction = model.predict(vec)
 
         # 출력
-        if user_input.strip() <= 2:
+        if len(user_input.strip()) <= 2:
             st.error("🚨 문자가 너무 짧아 구별이 어렵습니다!")
-        else if prediction[0] == 1:
+        elif prediction[0] == 1:
             st.error("🚨 피싱 가능성이 높은 메시지입니다!")
         else:
             st.success("✅ 일반 메시지로 판단됩니다.")
