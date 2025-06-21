@@ -139,7 +139,11 @@ When we first started using Streamlit to build the user interface, the app windo
 
 -The app was executed via the terminal using: streamlit run phishing_app.py
 
+![image](https://github.com/user-attachments/assets/36e7f630-2889-44c9-a615-80ffaab2d311)
 
+![image](https://github.com/user-attachments/assets/8827a883-e1fc-45be-9ea5-3257e2ecc0eb)
+
+![image](https://github.com/user-attachments/assets/d991733f-285a-48d9-8161-9b88d5431999)
 
 
 
