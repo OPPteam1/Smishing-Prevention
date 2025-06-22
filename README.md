@@ -141,7 +141,9 @@ When we first started using Streamlit to build the user interface, the app windo
 
 ![image](https://github.com/user-attachments/assets/36e7f630-2889-44c9-a615-80ffaab2d311)
 
+
 ![image](https://github.com/user-attachments/assets/8827a883-e1fc-45be-9ea5-3257e2ecc0eb)
+
 
 ![image](https://github.com/user-attachments/assets/d991733f-285a-48d9-8161-9b88d5431999)
 
@@ -185,6 +187,6 @@ When we first started using Streamlit to build the user interface, the app windo
 
 - If prompted to enter an email for Streamlit, simply press Enter to skip it.
 
-  ![image](https://github.com/user-attachments/assets/3c2cc907-e09c-42aa-a63c-6aecd06db7f5)
+![image](https://github.com/user-attachments/assets/3c2cc907-e09c-42aa-a63c-6aecd06db7f5)
 
 
