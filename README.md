@@ -12,7 +12,7 @@ avoid fraudulent scams.
 ---
 
 ## Team Contributions
--Hyunjin Bang: Expanded the dataset, Integrated components into a complete runnable script, Authored the project report
+-Hyunjin Phang: Expanded the dataset, Integrated components into a complete runnable script, Authored the project report
 
 -Byulhwi Son : Expanded the dataset, Implemented model training code, Wrote the README file 
 
