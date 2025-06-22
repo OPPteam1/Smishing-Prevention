@@ -158,6 +158,12 @@ When we first started using Streamlit to build the user interface, the app windo
 
 - This will generate two files: phishing_model.pkl, vectorizer.pkl
 
+![image](https://github.com/user-attachments/assets/2836f76f-fedb-4cf2-af86-9439959702e0)
+
+![image](https://github.com/user-attachments/assets/3a98744e-2706-4245-9c8e-484904ff42cd)
+
+
+
 2. Download Model Files:
 
 - Download the generated .pkl files to your local machine.
@@ -170,9 +176,15 @@ When we first started using Streamlit to build the user interface, the app windo
 
 - Open a terminal in the project folder.
 
+![image](https://github.com/user-attachments/assets/4aaf2a01-2c31-4d7c-bee8-158fd7bcf33b)
+
+
 4. Launch the Streamlit App: streamlit run phishing_app.py
 
 - This will open a web browser at http://localhost:8503/
 
 - If prompted to enter an email for Streamlit, simply press Enter to skip it.
+
+  ![image](https://github.com/user-attachments/assets/3c2cc907-e09c-42aa-a63c-6aecd06db7f5)
+
 
