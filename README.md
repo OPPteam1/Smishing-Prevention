@@ -146,6 +146,33 @@ When we first started using Streamlit to build the user interface, the app windo
 ![image](https://github.com/user-attachments/assets/d991733f-285a-48d9-8161-9b88d5431999)
 
 
+## How to run
 
+1.  Train the Model on Google Colab:
 
+- Open phisingTest.py in Google Colab.
+
+- Uncomment the code that saves the model and vectorizer files.
+
+- Run the script using the updated dataset (phising_dataset.csv).
+
+- This will generate two files: phishing_model.pkl, vectorizer.pkl
+
+2. Download Model Files:
+
+- Download the generated .pkl files to your local machine.
+
+- Place them in the same folder as phishing_app.py.
+
+3. Run the Web App Locally (Streamlit does not work on Colab):
+
+- Open the project folder in VS Code or your preferred IDE.
+
+- Open a terminal in the project folder.
+
+4. Launch the Streamlit App: streamlit run phishing_app.py
+
+- This will open a web browser at http://localhost:8503/
+
+- If prompted to enter an email for Streamlit, simply press Enter to skip it.
 
